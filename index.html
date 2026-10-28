@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#176b4d">
+<title>Sahayak – ગુજરાતી સરકારી ફોર્મ સહાયક</title>
+<style>
+:root{--green:#176b4d;--pale:#eaf6ef;--ink:#18312a;--muted:#5d716a;--line:#d9e7df;--gold:#fff3cf}
+*{box-sizing:border-box}
+body{margin:0;background:#f4f8f5;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Gujarati",sans-serif}
+header{background:linear-gradient(135deg,#176b4d,#23835e);color:#fff;padding:22px 18px 26px;border-radius:0 0 24px 24px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:#fff;color:var(--green);display:grid;place-items:center;font-size:26px;font-weight:800}
+h1{font-size:24px;margin:0}header p{margin:8px 0 0;line-height:1.6;opacity:.96}
+main{max-width:720px;margin:0 auto;padding:16px}
+.notice{background:var(--gold);padding:12px 14px;border-radius:14px;font-size:14px;line-height:1.6;margin-bottom:16px}
+.search{width:100%;border:1px solid var(--line);border-radius:13px;padding:13px 14px;font:inherit;background:#fff;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{border:1px solid var(--line);background:#fff;border-radius:16px;padding:16px;text-align:left;color:var(--ink);font:inherit;min-height:140px;cursor:pointer;box-shadow:0 3px 10px #173b2a08}
+.card:focus,.card:hover{outline:2px solid #9ccbb1}.emoji{font-size:28px;display:block;margin-bottom:9px}.card strong{display:block;font-size:16px}.card small{display:block;color:var(--muted);line-height:1.5;margin-top:6px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:16px}
+.panel h2{font-size:20px;margin:0 0 8px}.muted{color:var(--muted);font-size:14px;line-height:1.6}
+.back{border:0;background:var(--pale);color:var(--green);padding:10px 13px;border-radius:10px;font:inherit;font-weight:700;cursor:pointer;margin-bottom:12px}
+.checklist{padding:0;list-style:none;margin:14px 0}.checklist li{border-bottom:1px solid #edf2ee;padding:11px 0;display:flex;gap:10px;align-items:flex-start;line-height:1.5}.checklist input{width:19px;height:19px;accent-color:var(--green);margin-top:3px;flex-shrink:0}
+.steps{padding-left:22px;line-height:1.8}.link{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:12px 14px;border-radius:12px;font-weight:700;margin:5px 5px 0 0}
+.secondary{background:#eaf6ef;color:var(--green)}
+.hidden{display:none!important}
+footer{text-align:center;padding:22px 12px 32px;color:var(--muted);font-size:12px;line-height:1.6}
+.progress{height:8px;background:#e9f0eb;border-radius:20px;overflow:hidden;margin:8px 0 12px}.progress div{height:100%;width:0;background:var(--green);transition:width .2s}
+@media(max-width:390px){.grid{grid-template-columns:1fr}.card{min-height:unset}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo">સ</div><div><h1>Sahayak</h1><div>ગુજરાતી સરકારી ફોર્મ સહાયક</div></div></div>
+  <p>સરકારી અરજી માટે સરળ માર્ગદર્શન, દસ્તાવેજોની યાદી અને ઉપયોગી સત્તાવાર લિંક્સ.</p>
+</header>
+<main>
+  <div class="notice">ℹ️ આ નાગરિક માર્ગદર્શન માટેનો પ્રોટોટાઇપ છે; સરકારી વેબસાઇટ નથી. દસ્તાવેજોની જરૂરિયાત અને પાત્રતા અરજી કરતાં પહેલાં સત્તાવાર પોર્ટલ પર ચકાસો.</div>
+  <section id="home">
+    <input class="search" id="search" placeholder="સેવા શોધો… જેમ કે શિષ્યવૃત્તિ" aria-label="સેવા શોધો">
+    <div class="grid" id="cards">
+      <button class="card" data-service="scholarship"><span class="emoji">🎓</span><strong>શિષ્યવૃત્તિ</strong><small>અરજી પહેલાં તૈયારી અને દસ્તાવેજો</small></button>
+      <button class="card" data-service="income"><span class="emoji">📄</span><strong>આવકનો દાખલો</strong><small>માહિતી અને તૈયારીની ચેકલિસ્ટ</small></button>
+      <button class="card" data-service="caste"><span class="emoji">🪪</span><strong>જાતિનો દાખલો</strong><small>સામાન્ય માર્ગદર્શન અને નોંધો</small></button>
+      <button class="card" data-service="documents"><span class="emoji">☑️</span><strong>સામાન્ય દસ્તાવેજ ચેકલિસ્ટ</strong><small>અરજી પહેલાં તૈયારીઓ તપાસો</small></button>
+    </div>
+    <div class="panel">
+      <h2>સત્તાવાર પોર્ટલ</h2>
+      <p class="muted">અરજી અને તાજી સૂચનાઓ માટે સત્તાવાર વેબસાઇટનો જ ઉપયોગ કરો.</p>
+      <a class="link" href="https://www.digitalgujarat.gov.in/" target="_blank" rel="noopener">Digital Gujarat ખોલો ↗</a>
+      <a class="link secondary" href="https://gujaratindia.gov.in/" target="_blank" rel="noopener">ગુજરાત સરકાર ↗</a>
+    </div>
+  </section>
+  <section id="detail" class="panel hidden" aria-live="polite">
+    <button class="back" id="back">← પાછા જાઓ</button>
+    <h2 id="detailTitle"></h2>
+    <p class="muted" id="detailIntro"></p>
+    <h3>તૈયારીની ચેકલિસ્ટ</h3>
+    <p class="muted">નીચેની વસ્તુઓ સામાન્ય તૈયારી માટે છે. ચોક્કસ જરૂરિયાત સેવા અને નિયમો પ્રમાણે બદલાઈ શકે છે.</p>
+    <div class="progress"><div id="progressFill"></div></div>
+    <p class="muted" id="progressText">0 વસ્તુઓ પૂર્ણ</p>
+    <ul class="checklist" id="checklist"></ul>
+    <h3>સામાન્ય પગલાં</h3>
+    <ol class="steps" id="steps"></ol>
+    <a class="link" id="serviceLink" href="https://www.digitalgujarat.gov.in/" target="_blank" rel="noopener">સત્તાવાર પોર્ટલ ખોલો ↗</a>
+  </section>
+  <div class="panel">
+    <h2>સંપર્ક અને સુરક્ષા</h2>
+    <p class="muted">આ પ્રોટોટાઇપ પાસવર્ડ, આધાર નંબર કે બેંકની વિગતો માંગતો નથી. કોઈ વ્યક્તિગત દસ્તાવેજ અહીં અપલોડ ન કરો. સહાય માટે તમારી કોલેજ અથવા સંબંધિત સરકારી કચેરીની સત્તાવાર માહિતી ચકાસો.</p>
+  </div>
+</main>
+<footer>Sahayak · સ્વતંત્ર માર્ગદર્શન પ્રોટોટાઇપ · સરકારી વિભાગ સાથે સંકળાયેલું નથી.</footer>
+<script>
+const data = {
+ scholarship: {
+  title:"શિષ્યવૃત્તિ માર્ગદર્શન",
+  intro:"પાત્રતા, અરજીની તારીખો અને દસ્તાવેજો યોજના પ્રમાણે બદલાય છે. પહેલા યોગ્ય યોજના અને સત્તાવાર સૂચના તપાસો.",
+  items:["આધાર/ઓળખપત્ર (જો યોજનામાં જરૂરી હોય)","વિદ્યાર્થીની માર્કશીટ","કોલેજનું બોનાફાઇડ અથવા પ્રવેશ પુરાવો (જો જરૂરી હોય)","બેંક ખાતાની વિગતો — ફક્ત સત્તાવાર પોર્ટલ પર","આવક/જાતિનો દાખલો — યોજના પ્રમાણે","સત્તાવાર યોજનાની સૂચના અને છેલ્લી તારીખ"],
+  steps:["સત્તાવાર પોર્ટલ પર યોગ્ય યોજના શોધો.","પાત્રતા, છેલ્લી તારીખ અને દસ્તાવેજોની સૂચિ વાંચો.","માહિતી અને સ્કેન કરેલા દસ્તાવેજો તૈયાર કરો.","ફોર્મ સબમિટ કરતાં પહેલાં વિગતો ફરી તપાસો.","અરજી નંબર અને રસીદ સુરક્ષિત રાખો."],
+  url:"https://www.digitalgujarat.gov.in/"
+ },
+ income: {
+  title:"આવકના દાખલા માટે માર્ગદર્શન",
+  intro:"જરૂરી દસ્તાવેજો અને પ્રક્રિયા સ્થાનિક કચેરી તથા અરજીના પ્રકાર પ્રમાણે બદલાઈ શકે છે.",
+  items:["અરજદારની ઓળખનો પુરાવો","સરનામાનો પુરાવો","કુટુંબની આવક સંબંધિત પુરાવા","જરૂર પડે તો રેશનકાર્ડ અથવા કુટુંબની વિગતો","પાસપોર્ટ સાઇઝ ફોટો (જો માંગવામાં આવે)","સત્તાવાર અરજી સૂચનામાં જણાવેલા વધારાના દસ્તાવેજો"],
+  steps:["ગુજરાતની સત્તાવાર સેવા વેબસાઇટ ખોલો.","આવકના દાખલા માટેની વર્તમાન સૂચના વાંચો.","માગેલા દસ્તાવેજો તૈયાર કરો.","ફોર્મમાં વિગતો દસ્તાવેજ પ્રમાણે જ ભરો.","સબમિશન રસીદ અથવા અરજી નંબર સાચવો."],
+  url:"https://www.digitalgujarat.gov.in/"
+ },
+ caste: {
+  title:"જાતિના દાખલા માટે માર્ગદર્શન",
+  intro:"જાતિ પ્રમાણપત્રની પાત્રતા અને પુરાવા લાગુ નિયમો પ્રમાણે નક્કી થાય છે. અહીંની યાદી સામાન્ય છે, અંતિમ નથી.",
+  items:["અરજદારની ઓળખનો પુરાવો","સરનામાનો પુરાવો","જન્મ અથવા શાળા સંબંધિત પુરાવો (જરૂર મુજબ)","કુટુંબના સંબંધિત પ્રમાણપત્રો (જો નિયમ મુજબ જરૂરી હોય)","સત્તાવાર સૂચનામાં જણાવેલા અન્ય પુરાવા"],
+  steps:["સત્તાવાર પોર્ટલ અથવા સંબંધિત કચેરીની સૂચના તપાસો.","તમારા કેસ માટે કયા પુરાવા સ્વીકાર્ય છે તે ખાતરી કરો.","ફોર્મમાં નામ અને સરનામું દસ્તાવેજ પ્રમાણે લખો.","જમા કરાવ્યાનો પુરાવો સાચવો."],
+  url:"https://www.digitalgujarat.gov.in/"
+ },
+ documents: {
+  title:"સામાન્ય દસ્તાવેજ ચેકલિસ્ટ",
+  intro:"આ સામાન્ય યાદી છે. દરેક અરજી માટે બધા દસ્તાવેજો જરૂરી હોય જ એવું નથી.",
+  items:["અરજી માટેની સત્તાવાર સૂચના વાંચી","ઓળખપત્ર તૈયાર","સરનામાનો પુરાવો તૈયાર","જરૂર મુજબ માર્કશીટ/પ્રવેશ પુરાવો તૈયાર","જરૂર મુજબ આવક અથવા અન્ય પ્રમાણપત્ર તૈયાર","ફોટો/સ્કેન સ્પષ્ટ અને વાંચી શકાય તેવો","અરજીની છેલ્લી તારીખ ચકાસી"],
+  steps:["પહેલા સત્તાવાર સૂચના વાંચો.","માત્ર જરૂરી દસ્તાવેજો પસંદ કરો.","દસ્તાવેજોમાં નામ અને તારીખો સરખાં છે કે નહીં તપાસો.","ફોર્મ સબમિટ કર્યા પછી રસીદ સાચવો."],
+  url:"https://www.digitalgujarat.gov.in/"
+ }
+};
+const home=document.getElementById("home"), detail=document.getElementById("detail");
+function openService(key){
+ const d=data[key]; if(!d)return;
+ document.getElementById("detailTitle").textContent=d.title;
+ document.getElementById("detailIntro").textContent=d.intro;
+ document.getElementById("serviceLink").href=d.url;
+ const list=document.getElementById("checklist"); list.innerHTML="";
+ d.items.forEach((item,i)=>{
+  const li=document.createElement("li"), cb=document.createElement("input"), label=document.createElement("label");
+  cb.type="checkbox"; cb.id="item"+i; label.htmlFor=cb.id; label.textContent=item;
+  cb.addEventListener("change",updateProgress); li.append(cb,label); list.append(li);
+ });
+ const steps=document.getElementById("steps"); steps.innerHTML="";
+ d.steps.forEach(s=>{const li=document.createElement("li");li.textContent=s;steps.append(li)});
+ home.classList.add("hidden"); detail.classList.remove("hidden"); window.scrollTo({top:0,behavior:"smooth"}); updateProgress();
+}
+function updateProgress(){
+ const all=[...document.querySelectorAll("#checklist input")], done=all.filter(x=>x.checked).length;
+ document.getElementById("progressFill").style.width=(all.length?done/all.length*100:0)+"%";
+ document.getElementById("progressText").textContent=done+" / "+all.length+" વસ્તુઓ પૂર્ણ";
+}
+document.querySelectorAll("[data-service]").forEach(b=>b.addEventListener("click",()=>openService(b.dataset.service)));
+document.getElementById("back").addEventListener("click",()=>{detail.classList.add("hidden");home.classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"})});
+document.getElementById("search").addEventListener("input",e=>{
+ const q=e.target.value.trim().toLowerCase();
+ document.querySelectorAll("[data-service]").forEach(b=>b.classList.toggle("hidden",!b.innerText.toLowerCase().includes(q)));
+});
+</script>
+</body>
+</html>
